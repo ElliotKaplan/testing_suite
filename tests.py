@@ -26,10 +26,10 @@ class TestBase(TestCase):
         db.create_all()
 
         # create test admin user
-        admin = Employee(username='showe', password='UB0TNV8tx', is_admin=True)
+        admin = Employee(username='showe', password='admininplaintext', is_admin=True)
         
         # create test non-admin user
-        employee = Employee(username='showe2', password='UB0TNV8tx')
+        employee = Employee(username='showe2', password='testinplaintext')
 
         # save users to database
         db.session.add(admin)
